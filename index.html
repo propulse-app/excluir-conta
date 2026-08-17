@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Excluir conta e dados — ProPulse</title>
+<meta name="description" content="Como excluir sua conta do ProPulse (pacote com.propulseapp): os passos dentro do aplicativo, o caminho para quem não tem mais o app, o que é apagado, em quanto tempo e o que é conservado por obrigação legal.">
+<meta name="robots" content="index,follow">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗑️</text></svg>">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f7f9;
+    --border: #dfe3e8;
+    --text: #14181d;
+    --muted: #55606c;
+    --accent: #0b5c3f;
+    --accent-soft: #e8f3ee;
+    --danger: #8a1c1c;
+    --danger-soft: #fdeceb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101418;
+      --surface: #171d23;
+      --border: #2b343d;
+      --text: #eef2f6;
+      --muted: #a7b2bd;
+      --accent: #6fd6a8;
+      --accent-soft: #14301f;
+      --danger: #ff9c94;
+      --danger-soft: #2e1614;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 20px 72px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+  }
+
+  main { max-width: 720px; margin: 0 auto; }
+
+  header { padding: 40px 0 8px; }
+
+  .kicker {
+    font-size: 13px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 0 0 16px;
+    letter-spacing: -.01em;
+  }
+
+  h2 {
+    font-size: 21px;
+    line-height: 1.3;
+    margin: 40px 0 12px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  h2:first-of-type { border-top: none; padding-top: 0; }
+
+  p { margin: 0 0 14px; }
+
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 10px; }
+
+  a { color: var(--accent); }
+  a:hover { text-decoration: none; }
+
+  .lead { font-size: 18px; color: var(--text); }
+
+  .muted { color: var(--muted); }
+
+  .steps {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 22px 18px;
+    margin: 0 0 18px;
+  }
+  .steps ol { margin: 0; padding-left: 20px; }
+  .steps li::marker { font-weight: 700; }
+  .steps p:last-child { margin-bottom: 0; }
+
+  .note {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 0 0 14px;
+    font-size: 16px;
+  }
+  .note p:last-child { margin-bottom: 0; }
+
+  .warn {
+    background: var(--danger-soft);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--danger);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 0 0 14px;
+  }
+  .warn p:last-child { margin-bottom: 0; }
+
+  .contact {
+    display: block;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 0 0 12px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .contact:hover { border-color: var(--accent); }
+  .contact strong { display: block; color: var(--accent); font-size: 17px; }
+  .contact span { display: block; color: var(--muted); font-size: 15px; margin-top: 3px; }
+
+  footer {
+    max-width: 720px;
+    margin: 48px auto 0;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 15px;
+    color: var(--muted);
+  }
+  footer p { margin: 0 0 8px; }
+
+  @media (max-width: 480px) {
+    body { padding: 0 16px 56px; font-size: 16px; }
+    header { padding-top: 28px; }
+    h1 { font-size: 25px; }
+    h2 { font-size: 19px; }
+    .steps { padding: 18px 16px 14px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <p class="kicker">ProPulse — pacote com.propulseapp</p>
+    <h1>Excluir conta e dados</h1>
+    <p class="lead">Esta página explica como excluir sua conta do ProPulse
+      (propulseapp.com.br, pacote <strong>com.propulseapp</strong>) e o que
+      acontece com seus dados depois disso.</p>
+  </header>
+
+  <h2>Como excluir pelo aplicativo</h2>
+
+  <div class="steps">
+    <ol>
+      <li>Abra o aplicativo ProPulse e faça login;</li>
+      <li>Vá até a seção <strong>Perfil</strong>;</li>
+      <li>Toque em <strong>“Informações pessoais”</strong>;</li>
+      <li>Role até o fim da tela e toque em <strong>“Excluir Conta”</strong>;</li>
+      <li>Leia o aviso sobre a assinatura e <strong>confirme</strong>.</li>
+    </ol>
+  </div>
+
+  <p>A exclusão acontece <strong>na hora</strong>, sem precisar falar com
+    ninguém e sem etapa de aprovação.</p>
+
+  <div class="note">
+    <p>Na seção <strong>Perfil</strong> também existe o item
+      <strong>“Excluir conta”</strong>. Ele abre, dentro do aplicativo, uma tela
+      com esta mesma explicação — o botão que executa a exclusão é o descrito
+      acima, em “Informações pessoais”.</p>
+  </div>
+
+  <h2>Se você assina o Pro</h2>
+
+  <div class="warn">
+    <p>Sua assinatura não é cancelada automaticamente. Excluir a conta apaga
+      seus dados do ProPulse, mas a assinatura Pro é gerenciada pela loja
+      (App Store ou Google Play) e continua ativa — e sendo cobrada — até você
+      cancelá-la por lá. <strong>Cancele antes de excluir:</strong> no iPhone,
+      Ajustes → seu nome → Assinaturas; no Android, app Play Store → Perfil →
+      Pagamentos e assinaturas → Assinaturas.</p>
+  </div>
+
+  <h2>Se você não tem mais o aplicativo, ou não consegue entrar</h2>
+
+  <p>Você não precisa reinstalar o ProPulse para pedir a exclusão. Use um dos
+    dois caminhos abaixo:</p>
+
+  <a class="contact" href="https://propulseapp.com.br/suport">
+    <strong>Formulário de suporte →</strong>
+    <span>propulseapp.com.br/suport — escreva “Exclusão de conta” no assunto e
+      informe o e-mail cadastrado.</span>
+  </a>
+
+  <a class="contact" href="mailto:propulsebr@gmail.com?subject=Exclus%C3%A3o%20de%20conta">
+    <strong>propulsebr@gmail.com</strong>
+    <span>Envie o pedido a partir do endereço de e-mail cadastrado na conta.</span>
+  </a>
+
+  <p class="muted">Podemos pedir informações adicionais para confirmar que a
+    conta é sua, antes de apagar qualquer coisa — é o que impede que um terceiro
+    exclua a conta de outra pessoa.</p>
+
+  <h2>O que é apagado</h2>
+
+  <ul>
+    <li><strong>Dados de cadastro:</strong> nome, e-mail, telefone, CPF,
+      endereço, data de nascimento e foto de perfil;</li>
+    <li><strong>Dados de saúde informados no cadastro:</strong> peso, altura,
+      qualidade do sono, hábitos alimentares, consumo calórico, medicamentos,
+      suplementos e limitações físicas;</li>
+    <li><strong>Diário emocional:</strong> registros de humor, energia e foco;</li>
+    <li><strong>Metas, treinos e check-ins;</strong></li>
+    <li><strong>Conversas com a inteligência artificial;</strong></li>
+    <li><strong>Resultados de análise corporal.</strong></li>
+  </ul>
+
+  <h2>Em quanto tempo</h2>
+
+  <ul>
+    <li><strong>Dados do banco de dados</strong> — imediatamente, no momento em
+      que você confirma a exclusão;</li>
+    <li><strong>Arquivos guardados à parte</strong>, como a foto de perfil — em
+      até <strong>30 minutos</strong>, por um processo automático que roda nesse
+      intervalo.</li>
+  </ul>
+
+  <p>A exclusão é <strong>definitiva</strong>. Não há como desfazer, e não
+    mantemos cópia para reativação.</p>
+
+  <h2>O que é conservado, e por quê</h2>
+
+  <p>O registro do consentimento que você deu — a data, a hora e a versão da
+    Política de Privacidade que estava em vigor — é conservado mesmo após a
+    exclusão da conta. Ele não contém dados de saúde: guarda apenas a prova de
+    que o tratamento anterior tinha base legal, que é o que a LGPD exige
+    demonstrar.</p>
+
+  <p>Além dele, podem ser mantidos de forma restrita apenas os dados que a
+    legislação obrigue a conservar, pelo prazo e para a finalidade exigidos por
+    ela.</p>
+
+  <h2>Dúvidas</h2>
+
+  <p><a href="mailto:propulsebr@gmail.com">propulsebr@gmail.com</a></p>
+
+  <p>A Política de Privacidade completa está em
+    <a href="https://propulseapp.com.br/privacy">propulseapp.com.br/privacy</a>.</p>
+
+</main>
+
+<footer>
+  <p>Última atualização: 17 de agosto de 2026.</p>
+  <p>Esta página não coleta nenhum dado: não há formulário, cadastro,
+    cookie ou medição de acesso.</p>
+  <p>ProPulse — propulseapp.com.br — pacote com.propulseapp.</p>
+</footer>
+
+</body>
+</html>
