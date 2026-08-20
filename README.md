@@ -38,16 +38,23 @@ autoral; é cópia derivada de:
 | Bloco desta página | Origem |
 |---|---|
 | passos, o que é apagado, prazos, o que é conservado | `lib/pages/excluir_conta/excluir_conta_widget.dart` (rota `/excluir-conta`) |
-| retenção e ressalva legal | `lib/pages/privacy/privacy_widget.dart` §9 (política `2026-08-01`) |
+| retenção e ressalva legal | `lib/pages/privacy/privacy_widget.dart` §9 (política `2026-08-01`) — cópia pública em `propulse-app/politica-privacidade` |
 | aviso da assinatura Pro | `lib/backend/assinatura/aviso_exclusao_assinatura.dart` (`kAvisoAssinaturaExclusao` — **texto aprovado pelo dono, não editar sem ele**) |
 
-⚠️ **Os passos daqui divergem de propósito do §9 e da rota `/excluir-conta`.**
-Os dois dizem *"Perfil → Excluir Conta → confirme"*. Depois do commit `9c7996a`
-(tela principal nova do perfil), o item "Excluir conta" da seção Perfil abre a
-página explicativa, que **não tem botão**; o botão que executa a exclusão passou
-a viver em **Perfil → "Informações pessoais"**, no fim da tela. Esta página
-descreve o caminho que **funciona**. Quando o app for realinhado, corrija aqui
-também.
+✅ **Os passos daqui voltaram a bater com o app em 19/08/2026** — o realinhamento
+previsto abaixo aconteceu, e a página foi corrigida junto.
+
+O histórico, porque explica a nota de alternativa que ficou no texto: depois do
+commit `9c7996a` (tela principal nova do perfil), o item "Excluir conta" da
+seção Perfil abria uma página explicativa **sem botão**, e quem excluía de fato
+era **Perfil → "Informações pessoais"** — o caminho que esta página publicava.
+O **PR #178** deu botão próprio à rota `/excluir-conta`, e o **release 1.0.5
+(bundle 18), público na Play desde 19/08**, é o primeiro build em mãos de
+usuário com ele. Os passos passaram a ser o caminho curto (Perfil → "Excluir
+conta" → botão); "Informações pessoais" continua funcionando e virou nota.
+
+⚠️ **Regra que fica:** o gatilho para mexer nesta página é **build publicado**,
+não merge no repositório. Ela descreve o app que está no aparelho.
 
 ⚠️ **Os prazos não são texto de marketing:** "imediatamente" é a cascata das FKs
 de `delete_my_account()`; "até 30 minutos" é o intervalo do Schedule Trigger do
